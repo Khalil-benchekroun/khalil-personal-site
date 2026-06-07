@@ -1,4 +1,5 @@
 import './globals.css'
+import { LanguageProvider } from './LanguageContext'
 
 export const metadata = {
   title: 'Khalil Benchekroun — CTO · Marketing · Enseignant',
@@ -15,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

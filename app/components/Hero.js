@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { useLanguage } from '../LanguageContext'
 
 export default function Hero() {
   const containerRef = useRef(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -26,7 +28,6 @@ export default function Hero() {
       overflow: 'hidden',
       padding: '120px 80px 0 80px',
     }}>
-      {/* Background grid */}
       <div style={{
         position: 'absolute',
         inset: 0,
@@ -37,7 +38,6 @@ export default function Hero() {
         backgroundSize: '80px 80px',
       }} />
 
-      {/* Large background text */}
       <div style={{
         position: 'absolute',
         right: '-5%',
@@ -53,7 +53,6 @@ export default function Hero() {
         whiteSpace: 'nowrap',
       }}>KHALIL</div>
 
-      {/* Vertical line left */}
       <div style={{
         position: 'absolute',
         left: '24px',
@@ -70,7 +69,6 @@ export default function Hero() {
         transition: 'transform 0.1s ease',
         paddingTop: '40px',
       }}>
-        {/* Eyebrow */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -88,10 +86,9 @@ export default function Hero() {
             color: '#C9A84C',
             letterSpacing: '4px',
             textTransform: 'uppercase',
-          }}>Co-founder & CTO · LIVRR</span>
+          }}>{t.hero_eyebrow}</span>
         </div>
 
-        {/* Main heading */}
         <h1 style={{
           fontFamily: 'Cormorant Garamond, serif',
           fontSize: 'clamp(52px, 8vw, 100px)',
@@ -103,9 +100,8 @@ export default function Hero() {
           animation: 'fadeUp 0.8s ease forwards',
           opacity: 0,
           animationDelay: '0.4s',
-        }}>
-          Khalil
-        </h1>
+        }}>Khalil</h1>
+
         <h1 style={{
           fontFamily: 'Cormorant Garamond, serif',
           fontSize: 'clamp(52px, 8vw, 100px)',
@@ -120,11 +116,8 @@ export default function Hero() {
           backgroundSize: '200% auto',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-        }}>
-          Benchekroun
-        </h1>
+        }}>Benchekroun</h1>
 
-        {/* Tagline */}
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
           fontSize: 'clamp(15px, 1.8vw, 18px)',
@@ -137,12 +130,11 @@ export default function Hero() {
           opacity: 0,
           animationDelay: '0.7s',
         }}>
-          Je construis des marques, des produits et des stratégies qui durent.
+          {t.hero_tagline}
           <br />
-          <span style={{ color: '#C9A84C' }}>12 ans de terrain.</span> Une vision à long terme.
+          <span style={{ color: '#C9A84C' }}>{t.hero_years}</span> {t.hero_vision}
         </p>
 
-        {/* Pills */}
         <div style={{
           display: 'flex',
           gap: '12px',
@@ -152,7 +144,7 @@ export default function Hero() {
           opacity: 0,
           animationDelay: '0.9s',
         }}>
-          {['Expert Marketing Digital', 'Professeur Universitaire', 'Builder Tech · CTO'].map(tag => (
+          {[t.hero_pill1, t.hero_pill2, t.hero_pill3].map(tag => (
             <span key={tag} style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
@@ -166,7 +158,6 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* CTAs */}
         <div style={{
           display: 'flex',
           gap: '20px',
@@ -191,7 +182,7 @@ export default function Hero() {
           }}
           onMouseEnter={e => { e.target.style.background = '#E8C97A'; e.target.style.transform = 'translateY(-2px)' }}
           onMouseLeave={e => { e.target.style.background = '#C9A84C'; e.target.style.transform = 'translateY(0)' }}
-          >Prendre contact</a>
+          >{t.hero_cta1}</a>
 
           <a href="#expertise" style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -209,13 +200,12 @@ export default function Hero() {
           onMouseEnter={e => { e.currentTarget.style.color = '#C9A84C' }}
           onMouseLeave={e => { e.currentTarget.style.color = '#888888' }}
           >
-            Découvrir mon expertise
+            {t.hero_cta2}
             <span style={{ fontSize: '16px' }}>→</span>
           </a>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div style={{
         position: 'absolute',
         bottom: '40px',
@@ -240,7 +230,6 @@ export default function Hero() {
           width: '1px',
           height: '40px',
           background: 'linear-gradient(to bottom, #C9A84C, transparent)',
-          animation: 'fadeIn 1s ease infinite alternate',
         }} />
       </div>
     </section>

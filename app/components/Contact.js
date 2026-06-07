@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react'
+import { useLanguage } from '../LanguageContext'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '', subject: '' })
   const [sent, setSent] = useState(false)
+  const { t } = useLanguage()
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -33,7 +35,6 @@ export default function Contact() {
           alignItems: 'start',
         }} className="contact-grid">
 
-          {/* Left */}
           <div>
             <div style={{
               display: 'flex',
@@ -48,7 +49,7 @@ export default function Contact() {
                 color: '#C9A84C',
                 letterSpacing: '4px',
                 textTransform: 'uppercase',
-              }}>Contact</span>
+              }}>{t.contact_label}</span>
             </div>
 
             <h2 style={{
@@ -59,9 +60,9 @@ export default function Contact() {
               lineHeight: 1.1,
               marginBottom: '32px',
             }}>
-              Construisons
+              {t.contact_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>quelque chose ensemble</em>
+              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.contact_title2}</em>
             </h2>
 
             <p style={{
@@ -71,13 +72,8 @@ export default function Contact() {
               color: '#666',
               lineHeight: 1.8,
               marginBottom: '48px',
-            }}>
-              Vous avez un projet, une question, une collaboration en tête ?
-              Je réponds à chaque message personnellement. Pas de formulaire
-              automatisé, pas de template — une vraie conversation.
-            </p>
+            }}>{t.contact_desc}</p>
 
-            {/* Social links */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {socials.map(social => (
                 <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" style={{
@@ -128,7 +124,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right: Form */}
           <div>
             {sent ? (
               <div style={{
@@ -148,19 +143,19 @@ export default function Contact() {
                   fontWeight: 300,
                   color: '#F5F3EE',
                   marginBottom: '12px',
-                }}>Message envoyé</h3>
+                }}>{t.contact_sent_title}</h3>
                 <p style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '14px',
                   color: '#666',
-                }}>Je vous réponds dans les 24 heures.</p>
+                }}>{t.contact_sent_desc}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 {[
-                  { name: 'name', label: 'Nom complet', type: 'text', required: true },
-                  { name: 'email', label: 'Email', type: 'email', required: true },
-                  { name: 'subject', label: 'Sujet', type: 'text', required: false },
+                  { name: 'name', label: t.contact_name, type: 'text', required: true },
+                  { name: 'email', label: t.contact_email, type: 'email', required: true },
+                  { name: 'subject', label: t.contact_subject, type: 'text', required: false },
                 ].map(field => (
                   <div key={field.name}>
                     <label style={{
@@ -206,7 +201,7 @@ export default function Contact() {
                     letterSpacing: '3px',
                     textTransform: 'uppercase',
                     marginBottom: '8px',
-                  }}>Message *</label>
+                  }}>{t.contact_message} *</label>
                   <textarea
                     name="message"
                     value={form.message}
@@ -254,7 +249,7 @@ export default function Contact() {
                   e.target.style.transform = 'translateY(0)'
                 }}
                 >
-                  Envoyer le message
+                  {t.contact_send}
                 </button>
               </form>
             )}

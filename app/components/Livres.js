@@ -1,12 +1,15 @@
 'use client'
+import { useLanguage } from '../LanguageContext'
 
 export default function Livres() {
+  const { t } = useLanguage()
+
   const livres = [
     {
       cover: '/livre-marketing-ia.jpg',
       titre: 'Marketing Digital au Service de l\'IA',
       sousTitre: 'Stratégie · Intelligence Artificielle · Innovation',
-      description: 'L\'IA est en train de révolutionner le marketing digital. L\'évolution du digital et de la société pousse les développeurs à optimiser leurs algorithmes en y intégrant l\'intelligence artificielle pour performer et se tenir à la pointe de la technologie. Ce livre établit une relation précise entre ces deux univers.',
+      description: t.livres_desc_1 || 'L\'IA est en train de révolutionner le marketing digital. L\'évolution du digital et de la société pousse les développeurs à optimiser leurs algorithmes en y intégrant l\'intelligence artificielle pour performer et se tenir à la pointe de la technologie. Ce livre établit une relation précise entre ces deux univers.',
       langue: 'Français',
       lien: 'https://www.amazon.com/Marketing-digital-service-lIA-French-ebook/dp/B08KJBGBPV',
     },
@@ -14,7 +17,7 @@ export default function Livres() {
       cover: '/livre-rise-and-shine.jpg',
       titre: 'Rise and Shine',
       sousTitre: 'Tips and Strategies to Boost Your Motivation',
-      description: 'Libérez votre plein potentiel et atteignez vos objectifs avec ce guide complet sur la motivation. Que vous cherchiez à booster votre carrière, votre développement personnel ou simplement maintenir votre élan au quotidien — des stratégies concrètes, des exemples réels, des résultats mesurables.',
+      description: t.livres_desc_2 || 'Libérez votre plein potentiel et atteignez vos objectifs avec ce guide complet sur la motivation. Des stratégies concrètes, des exemples réels, des résultats mesurables.',
       langue: 'English',
       lien: 'https://www.amazon.com/Rise-Shine-Strategies-Boost-Motivation-ebook/dp/B0BY3LJM3R',
     },
@@ -26,7 +29,6 @@ export default function Livres() {
       maxWidth: '1200px',
       margin: '0 auto',
     }}>
-      {/* Header */}
       <div style={{ marginBottom: '72px' }}>
         <div style={{
           display: 'flex',
@@ -41,7 +43,7 @@ export default function Livres() {
             color: '#C9A84C',
             letterSpacing: '4px',
             textTransform: 'uppercase',
-          }}>Publications</span>
+          }}>{t.livres_label}</span>
         </div>
 
         <div style={{
@@ -58,8 +60,8 @@ export default function Livres() {
             color: '#F5F3EE',
             lineHeight: 1.1,
           }}>
-            Auteur de
-            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> 2 ouvrages</em>
+            {t.livres_title1}
+            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> {t.livres_title2}</em>
           </h2>
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -68,13 +70,10 @@ export default function Livres() {
             color: '#666',
             maxWidth: '360px',
             lineHeight: 1.7,
-          }}>
-            L'écriture comme extension naturelle de l'enseignement — rendre le savoir accessible, actionnable, durable.
-          </p>
+          }}>{t.livres_subtitle}</p>
         </div>
       </div>
 
-      {/* Books grid */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
@@ -100,7 +99,6 @@ export default function Livres() {
           }}
           className="livre-card"
           >
-            {/* Cover */}
             <div style={{
               position: 'relative',
               overflow: 'hidden',
@@ -124,7 +122,6 @@ export default function Livres() {
                 onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
                 onMouseLeave={e => e.target.style.transform = 'scale(1)'}
               />
-              {/* Language badge */}
               <div style={{
                 position: 'absolute',
                 top: '12px',
@@ -144,7 +141,6 @@ export default function Livres() {
               </div>
             </div>
 
-            {/* Content */}
             <div style={{
               padding: '32px 28px',
               display: 'flex',
@@ -205,7 +201,7 @@ export default function Livres() {
                 e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'
               }}
               >
-                Voir sur Amazon
+                {t.livres_cta}
                 <span style={{ fontSize: '14px' }}>→</span>
               </a>
             </div>

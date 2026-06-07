@@ -1,23 +1,27 @@
 'use client'
+import { useLanguage } from '../LanguageContext'
+
 export default function Expertise() {
+  const { t } = useLanguage()
+
   const pillars = [
     {
-      number: '01',
-      title: 'Marketing Digital & Growth',
-      description: 'Stratégie d\'acquisition, Google Ads, Meta Ads, SEO, content marketing et funnel d\'optimisation. Une approche data-driven qui transforme chaque euro investi en résultat mesurable.',
-      tags: ['Google Ads', 'Meta Ads', 'SEO', 'Content Strategy', 'Analytics'],
+      number: t.expertise_p1_number,
+      title: t.expertise_p1_title,
+      description: t.expertise_p1_desc,
+      tags: [t.expertise_p1_t1, t.expertise_p1_t2, t.expertise_p1_t3, t.expertise_p1_t4, t.expertise_p1_t5],
     },
     {
-      number: '02',
-      title: 'Enseignement & Transmission',
-      description: 'Professeur universitaire spécialisé en marketing, management et stratégie digitale. La pédagogie comme levier de transformation — des concepts complexes rendus actionnables.',
-      tags: ['Marketing Stratégique', 'Management', 'Cours & Formations', 'Accompagnement'],
+      number: t.expertise_p2_number,
+      title: t.expertise_p2_title,
+      description: t.expertise_p2_desc,
+      tags: [t.expertise_p2_t1, t.expertise_p2_t2, t.expertise_p2_t3, t.expertise_p2_t4],
     },
     {
-      number: '03',
-      title: 'Tech & Product Building',
-      description: 'CTO et builder full-stack. De la vision produit à l\'architecture technique, en passant par le développement et le déploiement. La tech au service de la stratégie business.',
-      tags: ['React / Next.js', 'Node.js', 'Supabase', 'Product Strategy', 'CTO Advisory'],
+      number: t.expertise_p3_number,
+      title: t.expertise_p3_title,
+      description: t.expertise_p3_desc,
+      tags: [t.expertise_p3_t1, t.expertise_p3_t2, t.expertise_p3_t3, t.expertise_p3_t4, t.expertise_p3_t5],
     },
   ]
 
@@ -29,8 +33,6 @@ export default function Expertise() {
       borderBottom: '1px solid rgba(201,168,76,0.08)',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-
-        {/* Header */}
         <div style={{ marginBottom: '72px' }}>
           <div style={{
             display: 'flex',
@@ -45,7 +47,7 @@ export default function Expertise() {
               color: '#C9A84C',
               letterSpacing: '4px',
               textTransform: 'uppercase',
-            }}>Expertise</span>
+            }}>{t.expertise_label}</span>
           </div>
 
           <div style={{
@@ -62,9 +64,9 @@ export default function Expertise() {
               color: '#F5F3EE',
               lineHeight: 1.1,
             }}>
-              Un profil triptyque
+              {t.expertise_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>rare et complémentaire</em>
+              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.expertise_title2}</em>
             </h2>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -73,13 +75,10 @@ export default function Expertise() {
               color: '#666',
               maxWidth: '320px',
               lineHeight: 1.7,
-            }}>
-              Trois dimensions qui se renforcent mutuellement pour créer une valeur qu'aucun profil isolé ne peut offrir.
-            </p>
+            }}>{t.expertise_subtitle}</p>
           </div>
         </div>
 
-        {/* Pillars */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
@@ -97,7 +96,6 @@ export default function Expertise() {
             onMouseEnter={e => e.currentTarget.style.background = '#111111'}
             onMouseLeave={e => e.currentTarget.style.background = '#0A0A0A'}
             >
-              {/* Number */}
               <div style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '80px',
@@ -109,7 +107,6 @@ export default function Expertise() {
                 right: '32px',
               }}>{pillar.number}</div>
 
-              {/* Gold dot */}
               <div style={{
                 width: '8px',
                 height: '8px',
@@ -117,7 +114,6 @@ export default function Expertise() {
                 marginBottom: '32px',
               }} />
 
-              {/* Title */}
               <h3 style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '26px',
@@ -127,7 +123,6 @@ export default function Expertise() {
                 marginBottom: '20px',
               }}>{pillar.title}</h3>
 
-              {/* Description */}
               <p style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '14px',
@@ -137,7 +132,6 @@ export default function Expertise() {
                 marginBottom: '32px',
               }}>{pillar.description}</p>
 
-              {/* Tags */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {pillar.tags.map(tag => (
                   <span key={tag} style={{
@@ -150,18 +144,6 @@ export default function Expertise() {
                   }}>{tag}</span>
                 ))}
               </div>
-
-              {/* Bottom line on hover */}
-              <div style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                width: '100%',
-                height: '1px',
-                background: 'linear-gradient(to right, #C9A84C, transparent)',
-                opacity: 0,
-                transition: 'opacity 0.3s',
-              }} className="bottom-line" />
             </div>
           ))}
         </div>

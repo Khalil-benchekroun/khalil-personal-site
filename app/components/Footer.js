@@ -1,4 +1,9 @@
+'use client'
+import { useLanguage } from '../LanguageContext'
+
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer style={{
       padding: '40px 48px',
@@ -25,7 +30,7 @@ export default function Footer() {
         color: '#444',
         letterSpacing: '1px',
       }}>
-        © {new Date().getFullYear()} Khalil Benchekroun — Tous droits réservés
+        © {new Date().getFullYear()} Khalil Benchekroun — {t.footer_rights}
       </div>
 
       <div style={{
@@ -34,7 +39,7 @@ export default function Footer() {
         color: '#444',
         letterSpacing: '1px',
       }}>
-        Fait avec <span style={{ color: '#C9A84C' }}>■</span> & précision
+        {t.footer_made} <span style={{ color: '#C9A84C' }}>■</span> {t.footer_precision}
       </div>
     </footer>
   )

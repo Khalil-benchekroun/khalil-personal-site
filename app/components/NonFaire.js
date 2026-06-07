@@ -1,27 +1,15 @@
 'use client'
+import { useLanguage } from '../LanguageContext'
 
 export default function NonFaire() {
+  const { t } = useLanguage()
+
   const items = [
-    {
-      title: 'Je ne travaille pas avec des clients qui veulent des résultats en 2 semaines.',
-      sub: 'La croissance durable se construit sur des mois, pas des sprints.',
-    },
-    {
-      title: 'Je ne vends pas des livrables — je vends des transformations.',
-      sub: 'Un rapport de 50 slides sans suivi d\'exécution ne m\'intéresse pas.',
-    },
-    {
-      title: 'Je ne dilue pas mon expertise pour décrocher un contrat.',
-      sub: 'Si votre projet ne correspond pas à mon champ, je vous le dis clairement.',
-    },
-    {
-      title: 'Je ne travaille pas sans accès aux données réelles.',
-      sub: 'Pas de stratégie sérieuse sans analytics, chiffres de vente ou feedback terrain.',
-    },
-    {
-      title: 'Je ne suis pas disponible 24h/24.',
-      sub: 'Je travaille avec focus et profondeur — pas dans l\'urgence permanente.',
-    },
+    { title: t.nonfaire_i1_title, sub: t.nonfaire_i1_sub },
+    { title: t.nonfaire_i2_title, sub: t.nonfaire_i2_sub },
+    { title: t.nonfaire_i3_title, sub: t.nonfaire_i3_sub },
+    { title: t.nonfaire_i4_title, sub: t.nonfaire_i4_sub },
+    { title: t.nonfaire_i5_title, sub: t.nonfaire_i5_sub },
   ]
 
   return (
@@ -32,6 +20,7 @@ export default function NonFaire() {
       borderBottom: '1px solid rgba(201,168,76,0.08)',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -53,7 +42,7 @@ export default function NonFaire() {
                 color: '#C9A84C',
                 letterSpacing: '4px',
                 textTransform: 'uppercase',
-              }}>Mes convictions</span>
+              }}>{t.nonfaire_label}</span>
             </div>
 
             <h2 style={{
@@ -63,9 +52,9 @@ export default function NonFaire() {
               color: '#F5F3EE',
               lineHeight: 1.1,
             }}>
-              Ce que je
+              {t.nonfaire_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>ne fais pas.</em>
+              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.nonfaire_title2}</em>
             </h2>
           </div>
 
@@ -76,10 +65,7 @@ export default function NonFaire() {
               fontWeight: 300,
               color: '#666',
               lineHeight: 1.8,
-            }}>
-              Travailler avec les bonnes personnes est plus important que travailler avec beaucoup de personnes.
-              Ces lignes directrices ne sont pas des contraintes — elles sont la condition d'un travail de qualité.
-            </p>
+            }}>{t.nonfaire_desc}</p>
             <div style={{
               marginTop: '32px',
               padding: '20px 24px',
@@ -93,9 +79,7 @@ export default function NonFaire() {
                 fontWeight: 300,
                 color: '#F5F3EE',
                 lineHeight: 1.6,
-              }}>
-                "Je préfère refuser un projet que de le livrer à moitié."
-              </p>
+              }}>"{t.nonfaire_quote}"</p>
             </div>
           </div>
         </div>
@@ -111,7 +95,6 @@ export default function NonFaire() {
               border: '1px solid rgba(201,168,76,0.06)',
               transition: 'all 0.3s',
               cursor: 'default',
-              position: 'relative',
               overflow: 'hidden',
             }}
             onMouseEnter={e => {

@@ -1,24 +1,27 @@
 'use client'
+import { useLanguage } from '../LanguageContext'
 
 export default function Methode() {
+  const { t } = useLanguage()
+
   const steps = [
     {
       number: '01',
-      title: 'Audit & Diagnostic',
-      description: 'Avant toute recommandation, je commence par comprendre. Analyse de l\'existant, identification des blocages, cartographie des opportunités. Pas de template — chaque situation est unique.',
-      details: ['Audit marketing & digital', 'Analyse concurrentielle', 'Identification des leviers prioritaires'],
+      title: t.methode_s1_title,
+      description: t.methode_s1_desc,
+      details: [t.methode_s1_d1, t.methode_s1_d2, t.methode_s1_d3],
     },
     {
       number: '02',
-      title: 'Stratégie & Roadmap',
-      description: 'Une fois le diagnostic posé, je construis une stratégie claire avec des priorités, des ressources et des timelines réalistes. La théorie académique au service de décisions concrètes.',
-      details: ['Plan d\'action structuré', 'KPIs définis en amont', 'Budget et ressources calibrés'],
+      title: t.methode_s2_title,
+      description: t.methode_s2_desc,
+      details: [t.methode_s2_d1, t.methode_s2_d2, t.methode_s2_d3],
     },
     {
       number: '03',
-      title: 'Exécution & Pilotage',
-      description: 'Je ne livre pas des slides — je m\'implique dans l\'exécution. Mise en place, suivi des performances, ajustements en temps réel. La stratégie vit dans les données, pas dans les présentations.',
-      details: ['Implémentation terrain', 'Reporting & itération', 'Transfert de compétences'],
+      title: t.methode_s3_title,
+      description: t.methode_s3_desc,
+      details: [t.methode_s3_d1, t.methode_s3_d2, t.methode_s3_d3],
     },
   ]
 
@@ -30,7 +33,6 @@ export default function Methode() {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-        {/* Header */}
         <div style={{ marginBottom: '80px' }}>
           <div style={{
             display: 'flex',
@@ -45,7 +47,7 @@ export default function Methode() {
               color: '#C9A84C',
               letterSpacing: '4px',
               textTransform: 'uppercase',
-            }}>Ma méthode</span>
+            }}>{t.methode_label}</span>
           </div>
 
           <div style={{
@@ -62,9 +64,9 @@ export default function Methode() {
               color: '#F5F3EE',
               lineHeight: 1.1,
             }}>
-              Pas de formule magique.
+              {t.methode_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>Un process éprouvé.</em>
+              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.methode_title2}</em>
             </h2>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -73,13 +75,10 @@ export default function Methode() {
               color: '#666',
               maxWidth: '340px',
               lineHeight: 1.7,
-            }}>
-              12 ans m'ont appris que la méthode fait autant la différence que les outils. Voici comment j'aborde chaque engagement.
-            </p>
+            }}>{t.methode_subtitle}</p>
           </div>
         </div>
 
-        {/* Content: photo left + steps right */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1.6fr',
@@ -107,16 +106,12 @@ export default function Methode() {
                   display: 'block',
                 }}
               />
-              {/* Gold overlay gradient */}
               <div style={{
                 position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
+                bottom: 0, left: 0, right: 0,
                 height: '40%',
                 background: 'linear-gradient(to top, rgba(10,10,10,0.7), transparent)',
               }} />
-              {/* Corner decorations */}
               <div style={{
                 position: 'absolute', top: '16px', left: '16px',
                 width: '30px', height: '30px',
@@ -130,13 +125,10 @@ export default function Methode() {
                 borderRight: '1px solid #C9A84C',
               }} />
             </div>
-            {/* Gold offset block */}
             <div style={{
               position: 'absolute',
-              bottom: '-16px',
-              right: '-16px',
-              width: '80px',
-              height: '80px',
+              bottom: '-16px', right: '-16px',
+              width: '80px', height: '80px',
               border: '1px solid rgba(201,168,76,0.2)',
               zIndex: -1,
             }} />
@@ -162,7 +154,6 @@ export default function Methode() {
                 e.currentTarget.style.background = '#0A0A0A'
               }}
               >
-                {/* Number column */}
                 <div style={{
                   display: 'flex',
                   alignItems: 'flex-start',
@@ -171,8 +162,7 @@ export default function Methode() {
                   borderRight: '1px solid rgba(201,168,76,0.08)',
                 }}>
                   <div style={{
-                    width: '36px',
-                    height: '36px',
+                    width: '36px', height: '36px',
                     border: '1px solid rgba(201,168,76,0.4)',
                     display: 'flex',
                     alignItems: 'center',
@@ -188,8 +178,7 @@ export default function Methode() {
                   </div>
                 </div>
 
-                {/* Content */}
-                <div style={{ padding: '32px 32px' }}>
+                <div style={{ padding: '32px' }}>
                   <div style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '10px',

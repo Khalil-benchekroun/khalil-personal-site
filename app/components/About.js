@@ -1,5 +1,9 @@
 'use client'
+import { useLanguage } from '../LanguageContext'
+
 export default function About() {
+  const { t } = useLanguage()
+
   return (
     <section id="about" style={{
       padding: 'clamp(80px, 10vw, 140px) 48px',
@@ -34,7 +38,6 @@ export default function About() {
                 display: 'block',
               }}
             />
-            {/* Corner decorations */}
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
               width: '30px', height: '30px',
@@ -49,7 +52,6 @@ export default function About() {
             }} />
           </div>
 
-          {/* Gold offset block */}
           <div style={{
             position: 'absolute',
             bottom: '-20px',
@@ -60,7 +62,6 @@ export default function About() {
             zIndex: -1,
           }} />
 
-          {/* LIVRR badge */}
           <div style={{
             position: 'absolute',
             bottom: '32px',
@@ -102,7 +103,7 @@ export default function About() {
               color: '#C9A84C',
               letterSpacing: '4px',
               textTransform: 'uppercase',
-            }}>À propos</span>
+            }}>{t.about_label}</span>
           </div>
 
           <h2 style={{
@@ -113,9 +114,9 @@ export default function About() {
             lineHeight: 1.1,
             marginBottom: '32px',
           }}>
-            Là où la stratégie
+            {t.about_title1}
             <br />
-            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>rencontre l'exécution</em>
+            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.about_title2}</em>
           </h2>
 
           <p style={{
@@ -125,11 +126,7 @@ export default function About() {
             color: '#888888',
             lineHeight: 1.8,
             marginBottom: '24px',
-          }}>
-            En 12 ans, j'ai appris que la croissance durable ne vient pas des raccourcis.
-            Elle vient d'une compréhension profonde des marchés, des comportements,
-            et de la capacité à construire des systèmes qui scalent.
-          </p>
+          }}>{t.about_p1}</p>
 
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -139,12 +136,11 @@ export default function About() {
             lineHeight: 1.8,
             marginBottom: '40px',
           }}>
-            Aujourd'hui, je combine trois casquettes rares :
-            <span style={{ color: '#F5F3EE' }}> expert marketing terrain</span>,
-            <span style={{ color: '#F5F3EE' }}> professeur universitaire</span>, et
-            <span style={{ color: '#F5F3EE' }}> CTO</span> d'une startup tech premium.
-            Ce triptyque me permet d'aborder chaque problème avec une rigueur et
-            une vision à 360°.
+            {t.about_p2}
+            <span style={{ color: '#F5F3EE' }}>{t.about_p2_1}</span>,
+            <span style={{ color: '#F5F3EE' }}>{t.about_p2_2}</span>, et
+            <span style={{ color: '#F5F3EE' }}>{t.about_p2_3}</span>
+            {t.about_p2_4}
           </p>
 
           <div style={{
@@ -156,9 +152,9 @@ export default function About() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {[
-              { title: 'Rigueur académique', desc: 'La théorie au service de la pratique — pas l\'inverse.' },
-              { title: 'Résultats mesurables', desc: 'Chaque stratégie doit se traduire en chiffres concrets.' },
-              { title: 'Vision long terme', desc: 'Construire des actifs durables, pas des effets de mode.' },
+              { title: t.about_v1_title, desc: t.about_v1_desc },
+              { title: t.about_v2_title, desc: t.about_v2_desc },
+              { title: t.about_v3_title, desc: t.about_v3_desc },
             ].map(item => (
               <div key={item.title} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <div style={{

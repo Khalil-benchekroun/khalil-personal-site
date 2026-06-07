@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { useLanguage } from '../LanguageContext'
 
 function CountUp({ end, suffix = '', duration = 2000 }) {
   const [count, setCount] = useState(0)
@@ -31,11 +32,13 @@ function CountUp({ end, suffix = '', duration = 2000 }) {
 }
 
 export default function Stats() {
+  const { t } = useLanguage()
+
   const stats = [
-    { value: 12, suffix: '+', label: 'Années d\'expérience', sub: 'en marketing digital' },
-    { value: 100, suffix: '+', label: 'Projets livrés', sub: 'de la stratégie à l\'exécution' },
-    { value: 3, suffix: '', label: 'Dimensions d\'expertise', sub: 'marketing · académique · tech' },
-    { value: 1, suffix: '', label: 'Startup tech en cours', sub: 'LIVRR — lancement Paris 2026' },
+    { value: 12, suffix: '+', label: t.stats_s1_label, sub: t.stats_s1_sub },
+    { value: 100, suffix: '+', label: t.stats_s2_label, sub: t.stats_s2_sub },
+    { value: 3, suffix: '', label: t.stats_s3_label, sub: t.stats_s3_sub },
+    { value: 1, suffix: '', label: t.stats_s4_label, sub: t.stats_s4_sub },
   ]
 
   return (
@@ -44,7 +47,6 @@ export default function Stats() {
       maxWidth: '1200px',
       margin: '0 auto',
     }}>
-      {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '80px' }}>
         <div style={{
           display: 'flex',
@@ -60,7 +62,7 @@ export default function Stats() {
             color: '#C9A84C',
             letterSpacing: '4px',
             textTransform: 'uppercase',
-          }}>En chiffres</span>
+          }}>{t.stats_label}</span>
           <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
         </div>
 
@@ -71,12 +73,11 @@ export default function Stats() {
           color: '#F5F3EE',
           lineHeight: 1.1,
         }}>
-          Des résultats,
-          <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> pas des promesses</em>
+          {t.stats_title1}
+          <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> {t.stats_title2}</em>
         </h2>
       </div>
 
-      {/* Stats grid */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 1fr)',
@@ -89,7 +90,6 @@ export default function Stats() {
             background: '#0A0A0A',
             padding: '48px 32px',
             textAlign: 'center',
-            position: 'relative',
           }}>
             <div style={{
               fontFamily: 'Cormorant Garamond, serif',
@@ -132,7 +132,6 @@ export default function Stats() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        {/* Background text */}
         <div style={{
           position: 'absolute',
           right: '-20px',
@@ -154,7 +153,7 @@ export default function Stats() {
             letterSpacing: '4px',
             textTransform: 'uppercase',
             marginBottom: '16px',
-          }}>Projet phare — 2026</div>
+          }}>{t.stats_livrr_label}</div>
           <h3 style={{
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(28px, 3vw, 40px)',
@@ -162,10 +161,7 @@ export default function Stats() {
             color: '#F5F3EE',
             lineHeight: 1.2,
             marginBottom: '16px',
-          }}>
-            LIVRR — Livraison premium
-            <br />same-day à Paris
-          </h3>
+          }}>{t.stats_livrr_title}</h3>
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '14px',
@@ -173,11 +169,7 @@ export default function Stats() {
             color: '#666',
             lineHeight: 1.7,
             maxWidth: '480px',
-          }}>
-            Plateforme de livraison mode & lifestyle haut de gamme. 
-            Architecture technique, stratégie marketing et vision produit — 
-            tout conçu et exécuté en interne.
-          </p>
+          }}>{t.stats_livrr_desc}</p>
         </div>
 
         <div style={{
@@ -189,9 +181,9 @@ export default function Stats() {
           flexShrink: 0,
         }}>
           {[
-            { label: 'Lancement', value: 'Sept. 2026' },
-            { label: 'Ville', value: 'Paris' },
-            { label: 'Rôle', value: 'Co-founder & CTO' },
+            { label: t.stats_livrr_launch, value: 'Sept. 2026' },
+            { label: t.stats_livrr_city, value: 'Paris' },
+            { label: t.stats_livrr_role, value: 'Co-founder & CTO' },
           ].map(item => (
             <div key={item.label} style={{ textAlign: 'right' }}>
               <div style={{
