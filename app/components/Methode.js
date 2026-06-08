@@ -27,7 +27,7 @@ export default function Methode() {
 
   return (
     <section id="methode" style={{
-      padding: 'clamp(80px, 10vw, 140px) 80px',
+      padding: 'clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px)',
       background: 'rgba(201,168,76,0.02)',
       borderTop: '1px solid rgba(201,168,76,0.08)',
     }}>

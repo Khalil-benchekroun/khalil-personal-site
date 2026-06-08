@@ -26,7 +26,7 @@ export default function Hero() {
       alignItems: 'center',
       position: 'relative',
       overflow: 'hidden',
-      padding: '120px 80px 0 80px',
+      padding: 'clamp(100px, 15vw, 120px) clamp(20px, 5vw, 80px) 0',
     }}>
       <div style={{
         position: 'absolute',

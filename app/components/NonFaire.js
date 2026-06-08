@@ -90,7 +90,7 @@ export default function NonFaire() {
               display: 'flex',
               alignItems: 'flex-start',
               gap: '32px',
-              padding: '32px 40px',
+              padding: 'clamp(20px, 4vw, 32px) clamp(16px, 4vw, 40px)',
               background: '#0A0A0A',
               border: '1px solid rgba(201,168,76,0.06)',
               transition: 'all 0.3s',
@@ -122,7 +122,7 @@ export default function NonFaire() {
               <div style={{ flex: 1 }}>
                 <p style={{
                   fontFamily: 'Cormorant Garamond, serif',
-                  fontSize: 'clamp(18px, 2vw, 22px)',
+                  fontSize: 'clamp(15px, 1.8vw, 22px)',
                   fontWeight: 400,
                   color: '#F5F3EE',
                   lineHeight: 1.4,

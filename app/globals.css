@@ -132,3 +132,13 @@ body::before {
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s linear infinite;
 }
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor, .cursor-follower {
+    display: none !important;
+  }
+}
