@@ -1,16 +1,28 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLanguage } from '../LanguageContext'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
   const { lang, setLang, t } = useLanguage()
+  const dropdownRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setLangOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
   const links = [
@@ -23,12 +35,14 @@ export default function Navbar() {
   ]
 
   const languages = [
-    { code: 'fr', label: 'FR' },
-    { code: 'en', label: 'EN' },
-    { code: 'de', label: 'DE' },
-    { code: 'es', label: 'ES' },
-    { code: 'ar', label: 'AR' },
+    { code: 'fr', label: 'Français', flag: '🇫🇷' },
+    { code: 'en', label: 'English', flag: '🇬🇧' },
+    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'ar', label: 'العربية', flag: '🇲🇦' },
   ]
+
+  const currentLang = languages.find(l => l.code === lang)
 
   return (
     <nav style={{
@@ -78,25 +92,92 @@ export default function Navbar() {
           >{link.label}</a>
         ))}
 
-        {/* Language switcher */}
-        <div style={{ display: 'flex', gap: '6px', alignItems: 'center', borderLeft: '1px solid rgba(201,168,76,0.2)', paddingLeft: '20px' }}>
-          {languages.map(l => (
-            <button key={l.code} onClick={() => setLang(l.code)} style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '10px',
-              fontWeight: lang === l.code ? 500 : 300,
-              color: lang === l.code ? '#C9A84C' : '#555',
-              background: lang === l.code ? 'rgba(201,168,76,0.1)' : 'transparent',
-              border: lang === l.code ? '1px solid rgba(201,168,76,0.3)' : '1px solid transparent',
-              padding: '4px 8px',
+        {/* Language dropdown */}
+        <div ref={dropdownRef} style={{ position: 'relative' }}>
+          <button
+            onClick={() => setLangOpen(!langOpen)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'transparent',
+              border: '1px solid rgba(201,168,76,0.3)',
+              padding: '7px 12px',
               cursor: 'pointer',
-              letterSpacing: '1px',
-              transition: 'all 0.2s',
+              transition: 'all 0.3s',
+              color: '#C9A84C',
             }}
-            onMouseEnter={e => { if(lang !== l.code) e.target.style.color = '#888' }}
-            onMouseLeave={e => { if(lang !== l.code) e.target.style.color = '#555' }}
-            >{l.label}</button>
-          ))}
+            onMouseEnter={e => e.currentTarget.style.borderColor = '#C9A84C'}
+            onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
+          >
+            <span style={{ fontSize: '14px' }}>{currentLang.flag}</span>
+            <span style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 400,
+              color: '#C9A84C',
+              letterSpacing: '1px',
+            }}>{currentLang.code.toUpperCase()}</span>
+            <span style={{
+              fontSize: '8px',
+              color: '#C9A84C',
+              transition: 'transform 0.3s',
+              transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              display: 'inline-block',
+            }}>▼</span>
+          </button>
+
+          {/* Dropdown menu */}
+          {langOpen && (
+            <div style={{
+              position: 'absolute',
+              top: 'calc(100% + 8px)',
+              right: 0,
+              background: '#111111',
+              border: '1px solid rgba(201,168,76,0.2)',
+              minWidth: '160px',
+              zIndex: 200,
+              overflow: 'hidden',
+            }}>
+              {languages.map(l => (
+                <button
+                  key={l.code}
+                  onClick={() => { setLang(l.code); setLangOpen(false) }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    width: '100%',
+                    padding: '12px 16px',
+                    background: lang === l.code ? 'rgba(201,168,76,0.1)' : 'transparent',
+                    border: 'none',
+                    borderBottom: '1px solid rgba(201,168,76,0.08)',
+                    cursor: 'pointer',
+                    transition: 'background 0.2s',
+                    textAlign: 'left',
+                  }}
+                  onMouseEnter={e => { if(lang !== l.code) e.currentTarget.style.background = 'rgba(201,168,76,0.05)' }}
+                  onMouseLeave={e => { if(lang !== l.code) e.currentTarget.style.background = 'transparent' }}
+                >
+                  <span style={{ fontSize: '16px' }}>{l.flag}</span>
+                  <span style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '12px',
+                    fontWeight: lang === l.code ? 500 : 300,
+                    color: lang === l.code ? '#C9A84C' : '#888',
+                    letterSpacing: '1px',
+                  }}>{l.label}</span>
+                  {lang === l.code && (
+                    <span style={{
+                      marginLeft: 'auto',
+                      color: '#C9A84C',
+                      fontSize: '12px',
+                    }}>✓</span>
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <a href="#contact" style={{
@@ -176,9 +257,12 @@ export default function Navbar() {
             }}>{link.label}</a>
           ))}
           {/* Mobile language switcher */}
-          <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+          <div style={{ display: 'flex', gap: '12px', marginTop: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
             {languages.map(l => (
               <button key={l.code} onClick={() => { setLang(l.code); setMenuOpen(false) }} style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '12px',
                 fontWeight: lang === l.code ? 500 : 300,
@@ -188,7 +272,10 @@ export default function Navbar() {
                 padding: '6px 12px',
                 cursor: 'pointer',
                 letterSpacing: '1px',
-              }}>{l.label}</button>
+              }}>
+                <span>{l.flag}</span>
+                <span>{l.label}</span>
+              </button>
             ))}
           </div>
         </div>
