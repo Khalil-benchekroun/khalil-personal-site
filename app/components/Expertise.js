@@ -40,11 +40,11 @@ export default function Expertise() {
             gap: '16px',
             marginBottom: '24px',
           }}>
-            <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+            <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
             <span style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
-              color: '#C9A84C',
+              color: '#1A56DB',
               letterSpacing: '4px',
               textTransform: 'uppercase',
             }}>{t.expertise_label}</span>
@@ -61,12 +61,12 @@ export default function Expertise() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(36px, 4vw, 60px)',
               fontWeight: 300,
-              color: '#F5F3EE',
+              color: '#0F172A',
               lineHeight: 1.1,
             }}>
               {t.expertise_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.expertise_title2}</em>
+              <em style={{ color: '#1A56DB', fontStyle: 'italic' }}>{t.expertise_title2}</em>
             </h2>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -87,14 +87,14 @@ export default function Expertise() {
         }} className="expertise-grid">
           {pillars.map((pillar, i) => (
             <div key={i} style={{
-              background: '#0A0A0A',
+              background: '#FFFFFF',
               padding: '48px 40px',
               position: 'relative',
               transition: 'background 0.3s',
               cursor: 'default',
             }}
-            onMouseEnter={e => e.currentTarget.style.background = '#111111'}
-            onMouseLeave={e => e.currentTarget.style.background = '#0A0A0A'}
+            onMouseEnter={e => e.currentTarget.style.background = '#F8F9FA'}
+            onMouseLeave={e => e.currentTarget.style.background = '#FFFFFF'}
             >
               <div style={{
                 fontFamily: 'Cormorant Garamond, serif',
@@ -110,7 +110,7 @@ export default function Expertise() {
               <div style={{
                 width: '8px',
                 height: '8px',
-                background: '#C9A84C',
+                background: '#1A56DB',
                 marginBottom: '32px',
               }} />
 
@@ -118,7 +118,7 @@ export default function Expertise() {
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '26px',
                 fontWeight: 400,
-                color: '#F5F3EE',
+                color: '#0F172A',
                 lineHeight: 1.2,
                 marginBottom: '20px',
               }}>{pillar.title}</h3>
@@ -137,7 +137,7 @@ export default function Expertise() {
                   <span key={tag} style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '10px',
-                    color: '#C9A84C',
+                    color: '#1A56DB',
                     border: '1px solid rgba(201,168,76,0.2)',
                     padding: '4px 10px',
                     letterSpacing: '1px',

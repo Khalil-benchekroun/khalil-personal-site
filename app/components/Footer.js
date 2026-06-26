@@ -18,10 +18,10 @@ export default function Footer() {
         fontFamily: 'Cormorant Garamond, serif',
         fontSize: '18px',
         fontWeight: 400,
-        color: '#F5F3EE',
+        color: '#0F172A',
         letterSpacing: '2px',
       }}>
-        KB<span style={{ color: '#C9A84C' }}>.</span>
+        KB<span style={{ color: '#1A56DB' }}>.</span>
       </div>
 
       <div style={{
@@ -39,7 +39,7 @@ export default function Footer() {
         color: '#444',
         letterSpacing: '1px',
       }}>
-        {t.footer_made} <span style={{ color: '#C9A84C' }}>■</span> {t.footer_precision}
+        {t.footer_made} <span style={{ color: '#1A56DB' }}>■</span> {t.footer_precision}
       </div>
     </footer>
   )

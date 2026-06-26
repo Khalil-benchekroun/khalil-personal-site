@@ -25,7 +25,7 @@ export default function About() {
             position: 'relative',
             overflow: 'hidden',
             border: '1px solid rgba(201,168,76,0.15)',
-            background: '#111111',
+            background: '#F8F9FA',
           }}>
             <img
               src="/photo-about.png"
@@ -41,14 +41,14 @@ export default function About() {
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
               width: '30px', height: '30px',
-              borderTop: '1px solid #C9A84C',
-              borderLeft: '1px solid #C9A84C',
+              borderTop: '1px solid #1A56DB',
+              borderLeft: '1px solid #1A56DB',
             }} />
             <div style={{
               position: 'absolute', bottom: '16px', right: '16px',
               width: '30px', height: '30px',
-              borderBottom: '1px solid #C9A84C',
-              borderRight: '1px solid #C9A84C',
+              borderBottom: '1px solid #1A56DB',
+              borderRight: '1px solid #1A56DB',
             }} />
           </div>
 
@@ -66,20 +66,20 @@ export default function About() {
             position: 'absolute',
             bottom: '32px',
             left: '-24px',
-            background: '#C9A84C',
+            background: '#1A56DB',
             padding: '16px 20px',
           }}>
             <div style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '22px',
               fontWeight: 500,
-              color: '#0A0A0A',
+              color: '#FFFFFF',
               lineHeight: 1,
             }}>LIVRR</div>
             <div style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '9px',
-              color: '#0A0A0A',
+              color: '#FFFFFF',
               letterSpacing: '2px',
               textTransform: 'uppercase',
               opacity: 0.7,
@@ -96,11 +96,11 @@ export default function About() {
             gap: '16px',
             marginBottom: '32px',
           }}>
-            <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+            <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
             <span style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
-              color: '#C9A84C',
+              color: '#1A56DB',
               letterSpacing: '4px',
               textTransform: 'uppercase',
             }}>{t.about_label}</span>
@@ -110,13 +110,13 @@ export default function About() {
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(36px, 4vw, 56px)',
             fontWeight: 300,
-            color: '#F5F3EE',
+            color: '#0F172A',
             lineHeight: 1.1,
             marginBottom: '32px',
           }}>
             {t.about_title1}
             <br />
-            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.about_title2}</em>
+            <em style={{ color: '#1A56DB', fontStyle: 'italic' }}>{t.about_title2}</em>
           </h2>
 
           <p style={{
@@ -137,9 +137,9 @@ export default function About() {
             marginBottom: '40px',
           }}>
             {t.about_p2}
-            <span style={{ color: '#F5F3EE' }}>{t.about_p2_1}</span>,
-            <span style={{ color: '#F5F3EE' }}>{t.about_p2_2}</span>, et
-            <span style={{ color: '#F5F3EE' }}>{t.about_p2_3}</span>
+            <span style={{ color: '#0F172A' }}>{t.about_p2_1}</span>,
+            <span style={{ color: '#0F172A' }}>{t.about_p2_2}</span>, et
+            <span style={{ color: '#0F172A' }}>{t.about_p2_3}</span>
             {t.about_p2_4}
           </p>
 
@@ -160,7 +160,7 @@ export default function About() {
                 <div style={{
                   width: '6px',
                   height: '6px',
-                  background: '#C9A84C',
+                  background: '#1A56DB',
                   marginTop: '6px',
                   flexShrink: 0,
                 }} />
@@ -169,7 +169,7 @@ export default function About() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '13px',
                     fontWeight: 500,
-                    color: '#F5F3EE',
+                    color: '#0F172A',
                     marginBottom: '4px',
                     letterSpacing: '1px',
                   }}>{item.title}</div>

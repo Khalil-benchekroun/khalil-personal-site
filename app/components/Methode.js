@@ -40,11 +40,11 @@ export default function Methode() {
             gap: '16px',
             marginBottom: '24px',
           }}>
-            <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+            <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
             <span style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
-              color: '#C9A84C',
+              color: '#1A56DB',
               letterSpacing: '4px',
               textTransform: 'uppercase',
             }}>{t.methode_label}</span>
@@ -61,12 +61,12 @@ export default function Methode() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(36px, 4vw, 60px)',
               fontWeight: 300,
-              color: '#F5F3EE',
+              color: '#0F172A',
               lineHeight: 1.1,
             }}>
               {t.methode_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.methode_title2}</em>
+              <em style={{ color: '#1A56DB', fontStyle: 'italic' }}>{t.methode_title2}</em>
             </h2>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -115,14 +115,14 @@ export default function Methode() {
               <div style={{
                 position: 'absolute', top: '16px', left: '16px',
                 width: '30px', height: '30px',
-                borderTop: '1px solid #C9A84C',
-                borderLeft: '1px solid #C9A84C',
+                borderTop: '1px solid #1A56DB',
+                borderLeft: '1px solid #1A56DB',
               }} />
               <div style={{
                 position: 'absolute', bottom: '16px', right: '16px',
                 width: '30px', height: '30px',
-                borderBottom: '1px solid #C9A84C',
-                borderRight: '1px solid #C9A84C',
+                borderBottom: '1px solid #1A56DB',
+                borderRight: '1px solid #1A56DB',
               }} />
             </div>
             <div style={{
@@ -140,7 +140,7 @@ export default function Methode() {
               <div key={i} style={{
                 display: 'grid',
                 gridTemplateColumns: '64px 1fr',
-                background: '#0A0A0A',
+                background: '#FFFFFF',
                 border: '1px solid rgba(201,168,76,0.08)',
                 transition: 'border-color 0.3s, background 0.3s',
                 cursor: 'default',
@@ -151,7 +151,7 @@ export default function Methode() {
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = 'rgba(201,168,76,0.08)'
-                e.currentTarget.style.background = '#0A0A0A'
+                e.currentTarget.style.background = '#FFFFFF'
               }}
               >
                 <div style={{
@@ -167,13 +167,13 @@ export default function Methode() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: '#0A0A0A',
+                    background: '#FFFFFF',
                   }}>
                     <span style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       fontSize: '14px',
                       fontWeight: 400,
-                      color: '#C9A84C',
+                      color: '#1A56DB',
                     }}>{i + 1}</span>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export default function Methode() {
                     fontFamily: 'Cormorant Garamond, serif',
                     fontSize: '22px',
                     fontWeight: 400,
-                    color: '#F5F3EE',
+                    color: '#0F172A',
                     lineHeight: 1.2,
                     marginBottom: '12px',
                   }}>{step.title}</h3>
@@ -211,7 +211,7 @@ export default function Methode() {
                       <span key={j} style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: '10px',
-                        color: '#C9A84C',
+                        color: '#1A56DB',
                         border: '1px solid rgba(201,168,76,0.2)',
                         padding: '4px 10px',
                         letterSpacing: '1px',

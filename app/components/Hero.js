@@ -78,12 +78,12 @@ export default function Hero() {
           opacity: 0,
           animationDelay: '0.2s',
         }}>
-          <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+          <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
             fontWeight: 400,
-            color: '#C9A84C',
+            color: '#1A56DB',
             letterSpacing: '4px',
             textTransform: 'uppercase',
           }}>{t.hero_eyebrow}</span>
@@ -95,7 +95,7 @@ export default function Hero() {
           fontWeight: 300,
           lineHeight: 1.05,
           letterSpacing: '-1px',
-          color: '#F5F3EE',
+          color: '#0F172A',
           marginBottom: '8px',
           animation: 'fadeUp 0.8s ease forwards',
           opacity: 0,
@@ -112,7 +112,7 @@ export default function Hero() {
           animation: 'fadeUp 0.8s ease forwards',
           opacity: 0,
           animationDelay: '0.5s',
-          background: 'linear-gradient(90deg, #C9A84C, #E8C97A, #C9A84C)',
+          background: 'linear-gradient(90deg, #1A56DB, #3B82F6, #1A56DB)',
           backgroundSize: '200% auto',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
@@ -132,7 +132,7 @@ export default function Hero() {
         }}>
           {t.hero_tagline}
           <br />
-          <span style={{ color: '#C9A84C' }}>{t.hero_years}</span> {t.hero_vision}
+          <span style={{ color: '#1A56DB' }}>{t.hero_years}</span> {t.hero_vision}
         </p>
 
         <div style={{
@@ -149,7 +149,7 @@ export default function Hero() {
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
               fontWeight: 400,
-              color: '#C9A84C',
+              color: '#1A56DB',
               border: '1px solid rgba(201,168,76,0.3)',
               padding: '8px 16px',
               letterSpacing: '1.5px',
@@ -171,8 +171,8 @@ export default function Hero() {
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
             fontWeight: 500,
-            color: '#0A0A0A',
-            background: '#C9A84C',
+            color: '#FFFFFF',
+            background: '#1A56DB',
             padding: '16px 36px',
             textDecoration: 'none',
             letterSpacing: '2px',
@@ -180,8 +180,8 @@ export default function Hero() {
             display: 'inline-block',
             transition: 'all 0.3s',
           }}
-          onMouseEnter={e => { e.target.style.background = '#E8C97A'; e.target.style.transform = 'translateY(-2px)' }}
-          onMouseLeave={e => { e.target.style.background = '#C9A84C'; e.target.style.transform = 'translateY(0)' }}
+          onMouseEnter={e => { e.target.style.background = '#3B82F6'; e.target.style.transform = 'translateY(-2px)' }}
+          onMouseLeave={e => { e.target.style.background = '#1A56DB'; e.target.style.transform = 'translateY(0)' }}
           >{t.hero_cta1}</a>
 
           <a href="#expertise" style={{
@@ -197,7 +197,7 @@ export default function Hero() {
             gap: '8px',
             transition: 'color 0.3s',
           }}
-          onMouseEnter={e => { e.currentTarget.style.color = '#C9A84C' }}
+          onMouseEnter={e => { e.currentTarget.style.color = '#1A56DB' }}
           onMouseLeave={e => { e.currentTarget.style.color = '#888888' }}
           >
             {t.hero_cta2}
@@ -229,7 +229,7 @@ export default function Hero() {
         <div style={{
           width: '1px',
           height: '40px',
-          background: 'linear-gradient(to bottom, #C9A84C, transparent)',
+          background: 'linear-gradient(to bottom, #1A56DB, transparent)',
         }} />
       </div>
     </section>

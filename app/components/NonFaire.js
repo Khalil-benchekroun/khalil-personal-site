@@ -35,11 +35,11 @@ export default function NonFaire() {
               gap: '16px',
               marginBottom: '24px',
             }}>
-              <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+              <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
               <span style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',
-                color: '#C9A84C',
+                color: '#1A56DB',
                 letterSpacing: '4px',
                 textTransform: 'uppercase',
               }}>{t.nonfaire_label}</span>
@@ -49,12 +49,12 @@ export default function NonFaire() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(36px, 4vw, 60px)',
               fontWeight: 300,
-              color: '#F5F3EE',
+              color: '#0F172A',
               lineHeight: 1.1,
             }}>
               {t.nonfaire_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.nonfaire_title2}</em>
+              <em style={{ color: '#1A56DB', fontStyle: 'italic' }}>{t.nonfaire_title2}</em>
             </h2>
           </div>
 
@@ -70,14 +70,14 @@ export default function NonFaire() {
               marginTop: '32px',
               padding: '20px 24px',
               border: '1px solid rgba(201,168,76,0.2)',
-              borderLeft: '3px solid #C9A84C',
+              borderLeft: '3px solid #1A56DB',
             }}>
               <p style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '18px',
                 fontStyle: 'italic',
                 fontWeight: 300,
-                color: '#F5F3EE',
+                color: '#0F172A',
                 lineHeight: 1.6,
               }}>"{t.nonfaire_quote}"</p>
             </div>
@@ -91,7 +91,7 @@ export default function NonFaire() {
               alignItems: 'flex-start',
               gap: '32px',
               padding: 'clamp(20px, 4vw, 32px) clamp(16px, 4vw, 40px)',
-              background: '#0A0A0A',
+              background: '#FFFFFF',
               border: '1px solid rgba(201,168,76,0.06)',
               transition: 'all 0.3s',
               cursor: 'default',
@@ -100,11 +100,11 @@ export default function NonFaire() {
             onMouseEnter={e => {
               e.currentTarget.style.borderColor = 'rgba(201,168,76,0.2)'
               e.currentTarget.style.background = '#0D0D0D'
-              e.currentTarget.querySelector('.x-mark').style.color = '#C9A84C'
+              e.currentTarget.querySelector('.x-mark').style.color = '#1A56DB'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.borderColor = 'rgba(201,168,76,0.06)'
-              e.currentTarget.style.background = '#0A0A0A'
+              e.currentTarget.style.background = '#FFFFFF'
               e.currentTarget.querySelector('.x-mark').style.color = '#333'
             }}
             >
@@ -124,7 +124,7 @@ export default function NonFaire() {
                   fontFamily: 'Cormorant Garamond, serif',
                   fontSize: 'clamp(15px, 1.8vw, 22px)',
                   fontWeight: 400,
-                  color: '#F5F3EE',
+                  color: '#0F172A',
                   lineHeight: 1.4,
                   marginBottom: '8px',
                 }}>{item.title}</p>
