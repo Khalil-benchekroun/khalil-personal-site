@@ -36,11 +36,11 @@ export default function Livres() {
           gap: '16px',
           marginBottom: '24px',
         }}>
-          <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+          <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
-            color: '#C9A84C',
+            color: '#1A56DB',
             letterSpacing: '4px',
             textTransform: 'uppercase',
           }}>{t.livres_label}</span>
@@ -57,11 +57,11 @@ export default function Livres() {
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(36px, 4vw, 60px)',
             fontWeight: 300,
-            color: '#F5F3EE',
+            color: '#0F172A',
             lineHeight: 1.1,
           }}>
             {t.livres_title1}
-            <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> {t.livres_title2}</em>
+            <em style={{ color: '#1A56DB', fontStyle: 'italic' }}> {t.livres_title2}</em>
           </h2>
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -85,7 +85,7 @@ export default function Livres() {
             gridTemplateColumns: '220px 1fr',
             gap: '0',
             border: '1px solid rgba(201,168,76,0.1)',
-            background: '#0A0A0A',
+            background: '#FFFFFF',
             transition: 'border-color 0.3s, background 0.3s',
             overflow: 'hidden',
           }}
@@ -95,7 +95,7 @@ export default function Livres() {
           }}
           onMouseLeave={e => {
             e.currentTarget.style.borderColor = 'rgba(201,168,76,0.1)'
-            e.currentTarget.style.background = '#0A0A0A'
+            e.currentTarget.style.background = '#FFFFFF'
           }}
           className="livre-card"
           >
@@ -104,7 +104,7 @@ export default function Livres() {
               overflow: 'hidden',
               borderRight: '1px solid rgba(201,168,76,0.1)',
               minHeight: '320px',
-              background: '#111111',
+              background: '#F8F9FA',
             }}>
               <img
                 src={livre.cover}
@@ -134,7 +134,7 @@ export default function Livres() {
                 <span style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '9px',
-                  color: '#C9A84C',
+                  color: '#1A56DB',
                   letterSpacing: '2px',
                   textTransform: 'uppercase',
                 }}>{livre.langue}</span>
@@ -162,7 +162,7 @@ export default function Livres() {
                   fontFamily: 'Cormorant Garamond, serif',
                   fontSize: 'clamp(20px, 2vw, 26px)',
                   fontWeight: 400,
-                  color: '#F5F3EE',
+                  color: '#0F172A',
                   lineHeight: 1.2,
                   marginBottom: '16px',
                 }}>{livre.titre}</h3>
@@ -183,7 +183,7 @@ export default function Livres() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '10px',
                 fontWeight: 500,
-                color: '#C9A84C',
+                color: '#1A56DB',
                 textDecoration: 'none',
                 letterSpacing: '2px',
                 textTransform: 'uppercase',
@@ -193,11 +193,11 @@ export default function Livres() {
                 transition: 'color 0.3s, border-color 0.3s',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.color = '#E8C97A'
-                e.currentTarget.style.borderColor = '#E8C97A'
+                e.currentTarget.style.color = '#3B82F6'
+                e.currentTarget.style.borderColor = '#3B82F6'
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.color = '#C9A84C'
+                e.currentTarget.style.color = '#1A56DB'
                 e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'
               }}
               >

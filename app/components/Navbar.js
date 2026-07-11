@@ -65,13 +65,13 @@ export default function Navbar() {
         fontFamily: 'Cormorant Garamond, serif',
         fontSize: '20px',
         fontWeight: 400,
-        color: '#F5F3EE',
+        color: '#0F172A',
         textDecoration: 'none',
         letterSpacing: '2px',
         textTransform: 'uppercase',
         flexShrink: 0,
       }}>
-        KB<span style={{ color: '#C9A84C' }}>.</span>
+        KB<span style={{ color: '#1A56DB' }}>.</span>
       </a>
 
       {/* Desktop links */}
@@ -87,7 +87,7 @@ export default function Navbar() {
             textTransform: 'uppercase',
             transition: 'color 0.3s',
           }}
-          onMouseEnter={e => e.target.style.color = '#C9A84C'}
+          onMouseEnter={e => e.target.style.color = '#1A56DB'}
           onMouseLeave={e => e.target.style.color = '#888888'}
           >{link.label}</a>
         ))}
@@ -105,9 +105,9 @@ export default function Navbar() {
               padding: '7px 12px',
               cursor: 'pointer',
               transition: 'all 0.3s',
-              color: '#C9A84C',
+              color: '#1A56DB',
             }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = '#C9A84C'}
+            onMouseEnter={e => e.currentTarget.style.borderColor = '#1A56DB'}
             onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
           >
             <span style={{ fontSize: '14px' }}>{currentLang.flag}</span>
@@ -115,12 +115,12 @@ export default function Navbar() {
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
               fontWeight: 400,
-              color: '#C9A84C',
+              color: '#1A56DB',
               letterSpacing: '1px',
             }}>{currentLang.code.toUpperCase()}</span>
             <span style={{
               fontSize: '8px',
-              color: '#C9A84C',
+              color: '#1A56DB',
               transition: 'transform 0.3s',
               transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)',
               display: 'inline-block',
@@ -133,7 +133,7 @@ export default function Navbar() {
               position: 'absolute',
               top: 'calc(100% + 8px)',
               right: 0,
-              background: '#111111',
+              background: '#F8F9FA',
               border: '1px solid rgba(201,168,76,0.2)',
               minWidth: '160px',
               zIndex: 200,
@@ -164,13 +164,13 @@ export default function Navbar() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '12px',
                     fontWeight: lang === l.code ? 500 : 300,
-                    color: lang === l.code ? '#C9A84C' : '#888',
+                    color: lang === l.code ? '#1A56DB' : '#888',
                     letterSpacing: '1px',
                   }}>{l.label}</span>
                   {lang === l.code && (
                     <span style={{
                       marginLeft: 'auto',
-                      color: '#C9A84C',
+                      color: '#1A56DB',
                       fontSize: '12px',
                     }}>✓</span>
                   )}
@@ -184,8 +184,8 @@ export default function Navbar() {
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '11px',
           fontWeight: 500,
-          color: '#0A0A0A',
-          background: '#C9A84C',
+          color: '#FFFFFF',
+          background: '#1A56DB',
           padding: '10px 20px',
           textDecoration: 'none',
           letterSpacing: '2px',
@@ -194,8 +194,8 @@ export default function Navbar() {
           whiteSpace: 'nowrap',
           flexShrink: 0,
         }}
-        onMouseEnter={e => e.target.style.background = '#E8C97A'}
-        onMouseLeave={e => e.target.style.background = '#C9A84C'}
+        onMouseEnter={e => e.target.style.background = '#3B82F6'}
+        onMouseLeave={e => e.target.style.background = '#1A56DB'}
         >{t.nav_cta}</a>
       </div>
 
@@ -218,7 +218,7 @@ export default function Navbar() {
             display: 'block',
             width: '24px',
             height: '1px',
-            background: '#C9A84C',
+            background: '#1A56DB',
           }} />
         ))}
       </button>
@@ -228,7 +228,7 @@ export default function Navbar() {
         <div style={{
           position: 'fixed',
           inset: 0,
-          background: '#0A0A0A',
+          background: '#FFFFFF',
           zIndex: 200,
           display: 'flex',
           flexDirection: 'column',
@@ -242,7 +242,7 @@ export default function Navbar() {
             right: '24px',
             background: 'none',
             border: 'none',
-            color: '#C9A84C',
+            color: '#1A56DB',
             fontSize: '24px',
             cursor: 'pointer',
           }}>✕</button>
@@ -251,7 +251,7 @@ export default function Navbar() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '36px',
               fontWeight: 300,
-              color: '#F5F3EE',
+              color: '#0F172A',
               textDecoration: 'none',
               letterSpacing: '2px',
             }}>{link.label}</a>
@@ -266,7 +266,7 @@ export default function Navbar() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '12px',
                 fontWeight: lang === l.code ? 500 : 300,
-                color: lang === l.code ? '#C9A84C' : '#555',
+                color: lang === l.code ? '#1A56DB' : '#555',
                 background: 'transparent',
                 border: lang === l.code ? '1px solid rgba(201,168,76,0.3)' : '1px solid transparent',
                 padding: '6px 12px',

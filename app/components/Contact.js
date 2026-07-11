@@ -42,11 +42,11 @@ export default function Contact() {
               gap: '16px',
               marginBottom: '32px',
             }}>
-              <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+              <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
               <span style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',
-                color: '#C9A84C',
+                color: '#1A56DB',
                 letterSpacing: '4px',
                 textTransform: 'uppercase',
               }}>{t.contact_label}</span>
@@ -56,13 +56,13 @@ export default function Contact() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(36px, 4vw, 56px)',
               fontWeight: 300,
-              color: '#F5F3EE',
+              color: '#0F172A',
               lineHeight: 1.1,
               marginBottom: '32px',
             }}>
               {t.contact_title1}
               <br />
-              <em style={{ color: '#C9A84C', fontStyle: 'italic' }}>{t.contact_title2}</em>
+              <em style={{ color: '#1A56DB', fontStyle: 'italic' }}>{t.contact_title2}</em>
             </h2>
 
             <p style={{
@@ -104,7 +104,7 @@ export default function Contact() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '12px',
                     fontWeight: 500,
-                    color: '#C9A84C',
+                    color: '#1A56DB',
                     flexShrink: 0,
                   }}>{social.icon}</div>
                   <span style={{
@@ -116,7 +116,7 @@ export default function Contact() {
                   }}>{social.label}</span>
                   <span style={{
                     marginLeft: 'auto',
-                    color: '#C9A84C',
+                    color: '#1A56DB',
                     fontSize: '16px',
                   }}>→</span>
                 </a>
@@ -134,14 +134,14 @@ export default function Contact() {
                 <div style={{
                   fontFamily: 'Cormorant Garamond, serif',
                   fontSize: '48px',
-                  color: '#C9A84C',
+                  color: '#1A56DB',
                   marginBottom: '16px',
                 }}>✓</div>
                 <h3 style={{
                   fontFamily: 'Cormorant Garamond, serif',
                   fontSize: '28px',
                   fontWeight: 300,
-                  color: '#F5F3EE',
+                  color: '#0F172A',
                   marginBottom: '12px',
                 }}>{t.contact_sent_title}</h3>
                 <p style={{
@@ -162,7 +162,7 @@ export default function Contact() {
                       display: 'block',
                       fontFamily: 'DM Sans, sans-serif',
                       fontSize: '10px',
-                      color: '#C9A84C',
+                      color: '#1A56DB',
                       letterSpacing: '3px',
                       textTransform: 'uppercase',
                       marginBottom: '8px',
@@ -182,11 +182,11 @@ export default function Contact() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: '15px',
                         fontWeight: 300,
-                        color: '#F5F3EE',
+                        color: '#0F172A',
                         outline: 'none',
                         transition: 'border-color 0.3s',
                       }}
-                      onFocus={e => e.target.style.borderColor = '#C9A84C'}
+                      onFocus={e => e.target.style.borderColor = '#1A56DB'}
                       onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'}
                     />
                   </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                     display: 'block',
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '10px',
-                    color: '#C9A84C',
+                    color: '#1A56DB',
                     letterSpacing: '3px',
                     textTransform: 'uppercase',
                     marginBottom: '8px',
@@ -216,24 +216,24 @@ export default function Contact() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontSize: '15px',
                       fontWeight: 300,
-                      color: '#F5F3EE',
+                      color: '#0F172A',
                       outline: 'none',
                       resize: 'vertical',
                       transition: 'border-color 0.3s',
                     }}
-                    onFocus={e => e.target.style.borderColor = '#C9A84C'}
+                    onFocus={e => e.target.style.borderColor = '#1A56DB'}
                     onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'}
                   />
                 </div>
 
                 <button type="submit" style={{
-                  background: '#C9A84C',
+                  background: '#1A56DB',
                   border: 'none',
                   padding: '18px 40px',
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '11px',
                   fontWeight: 500,
-                  color: '#0A0A0A',
+                  color: '#FFFFFF',
                   letterSpacing: '3px',
                   textTransform: 'uppercase',
                   cursor: 'pointer',
@@ -241,11 +241,11 @@ export default function Contact() {
                   alignSelf: 'flex-start',
                 }}
                 onMouseEnter={e => {
-                  e.target.style.background = '#E8C97A'
+                  e.target.style.background = '#3B82F6'
                   e.target.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={e => {
-                  e.target.style.background = '#C9A84C'
+                  e.target.style.background = '#1A56DB'
                   e.target.style.transform = 'translateY(0)'
                 }}
                 >

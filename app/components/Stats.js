@@ -55,26 +55,26 @@ export default function Stats() {
           gap: '16px',
           marginBottom: '24px',
         }}>
-          <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+          <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
-            color: '#C9A84C',
+            color: '#1A56DB',
             letterSpacing: '4px',
             textTransform: 'uppercase',
           }}>{t.stats_label}</span>
-          <div style={{ width: '40px', height: '1px', background: '#C9A84C' }} />
+          <div style={{ width: '40px', height: '1px', background: '#1A56DB' }} />
         </div>
 
         <h2 style={{
           fontFamily: 'Cormorant Garamond, serif',
           fontSize: 'clamp(36px, 4vw, 56px)',
           fontWeight: 300,
-          color: '#F5F3EE',
+          color: '#0F172A',
           lineHeight: 1.1,
         }}>
           {t.stats_title1}
-          <em style={{ color: '#C9A84C', fontStyle: 'italic' }}> {t.stats_title2}</em>
+          <em style={{ color: '#1A56DB', fontStyle: 'italic' }}> {t.stats_title2}</em>
         </h2>
       </div>
 
@@ -87,7 +87,7 @@ export default function Stats() {
       }} className="stats-grid">
         {stats.map((stat, i) => (
           <div key={i} style={{
-            background: '#0A0A0A',
+            background: '#FFFFFF',
             padding: '48px 32px',
             textAlign: 'center',
           }}>
@@ -95,7 +95,7 @@ export default function Stats() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(48px, 5vw, 72px)',
               fontWeight: 300,
-              color: '#C9A84C',
+              color: '#1A56DB',
               lineHeight: 1,
               marginBottom: '12px',
             }}>
@@ -105,7 +105,7 @@ export default function Stats() {
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '13px',
               fontWeight: 500,
-              color: '#F5F3EE',
+              color: '#0F172A',
               letterSpacing: '1px',
               marginBottom: '8px',
             }}>{stat.label}</div>
@@ -149,7 +149,7 @@ export default function Stats() {
           <div style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
-            color: '#C9A84C',
+            color: '#1A56DB',
             letterSpacing: '4px',
             textTransform: 'uppercase',
             marginBottom: '16px',
@@ -158,7 +158,7 @@ export default function Stats() {
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(28px, 3vw, 40px)',
             fontWeight: 300,
-            color: '#F5F3EE',
+            color: '#0F172A',
             lineHeight: 1.2,
             marginBottom: '16px',
           }}>{t.stats_livrr_title}</h3>
@@ -198,7 +198,7 @@ export default function Stats() {
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '20px',
                 fontWeight: 400,
-                color: '#C9A84C',
+                color: '#1A56DB',
               }}>{item.value}</div>
             </div>
           ))}

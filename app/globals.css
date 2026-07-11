@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
-  --black: #0A0A0A;
-  --dark: #111111;
-  --dark-2: #1A1A1A;
+  --blue: #1A56DB;
+  --blue-light: #3B82F6;
+  --white-bg: #FFFFFF;
+  --light: #F8F9FA;
+  --light-2: #EEF1F5;
   --gray: #888888;
   --gray-light: #CCCCCC;
-  --white: #F5F3EE;
+  --text-dark: #0F172A;
 }
 
 * {
@@ -24,8 +24,8 @@ html {
 }
 
 body {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--white-bg);
+  color: var(--text-dark);
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
@@ -36,7 +36,7 @@ body {
 .cursor {
   width: 8px;
   height: 8px;
-  background: var(--gold);
+  background: var(--blue);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -48,7 +48,7 @@ body {
 .cursor-follower {
   width: 32px;
   height: 32px;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--blue);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -68,10 +68,10 @@ body {
 }
 
 /* Gold line decoration */
-.gold-line {
+.blue-line {
   width: 60px;
   height: 1px;
-  background: var(--gold);
+  background: var(--blue);
 }
 
 /* Noise texture overlay */
@@ -90,10 +90,10 @@ body::before {
   width: 3px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--black);
+  background: var(--white-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gold);
+  background: var(--blue);
 }
 
 /* Animations */
@@ -125,8 +125,8 @@ body::before {
   animation: fadeIn 1s ease forwards;
 }
 
-.gold-shimmer {
-  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+.blue-shimmer {
+  background: linear-gradient(90deg, var(--blue), var(--blue-light), var(--blue));
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
