@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '../LanguageContext'
 
 export default function Methode() {
@@ -95,15 +96,14 @@ export default function Methode() {
               border: '1px solid rgba(201,168,76,0.15)',
               position: 'relative',
             }}>
-              <img
+              <Image
                 src="/photo-methode.png"
                 alt="Khalil Benchekroun en action"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 style={{
-                  width: '100%',
-                  height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center top',
-                  display: 'block',
                 }}
               />
               <div style={{

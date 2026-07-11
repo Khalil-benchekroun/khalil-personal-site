@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '../LanguageContext'
 
 export default function About() {
@@ -27,15 +28,14 @@ export default function About() {
             border: '1px solid rgba(201,168,76,0.15)',
             background: '#F8F9FA',
           }}>
-            <img
+            <Image
               src="/photo-about.png"
               alt="Khalil Benchekroun"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
-                width: '100%',
-                height: '100%',
                 objectFit: 'contain',
                 objectPosition: 'center center',
-                display: 'block',
               }}
             />
             <div style={{

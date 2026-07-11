@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '../LanguageContext'
 
 export default function Livres() {
@@ -106,18 +107,15 @@ export default function Livres() {
               minHeight: '320px',
               background: '#F8F9FA',
             }}>
-              <img
+              <Image
                 src={livre.cover}
                 alt={livre.titre}
+                fill
+                sizes="220px"
                 style={{
-                  width: '100%',
-                  height: '100%',
                   objectFit: 'contain',
                   objectPosition: 'center center',
-                  display: 'block',
                   transition: 'transform 0.5s ease',
-                  position: 'absolute',
-                  inset: 0,
                 }}
                 onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
                 onMouseLeave={e => e.target.style.transform = 'scale(1)'}

@@ -95,28 +95,29 @@ export default function Hero() {
           fontWeight: 300,
           lineHeight: 1.05,
           letterSpacing: '-1px',
-          color: '#0F172A',
-          marginBottom: '8px',
-          animation: 'fadeUp 0.8s ease forwards',
-          opacity: 0,
-          animationDelay: '0.4s',
-        }}>Khalil</h1>
+          margin: 0,
+        }}>
+          <span style={{
+            display: 'block',
+            color: '#0F172A',
+            marginBottom: '8px',
+            animation: 'fadeUp 0.8s ease forwards',
+            opacity: 0,
+            animationDelay: '0.4s',
+          }}>Khalil</span>
 
-        <h1 style={{
-          fontFamily: 'Cormorant Garamond, serif',
-          fontSize: 'clamp(52px, 8vw, 100px)',
-          fontWeight: 300,
-          lineHeight: 1.05,
-          letterSpacing: '-1px',
-          marginBottom: '40px',
-          animation: 'fadeUp 0.8s ease forwards',
-          opacity: 0,
-          animationDelay: '0.5s',
-          background: 'linear-gradient(90deg, #1A56DB, #3B82F6, #1A56DB)',
-          backgroundSize: '200% auto',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}>Benchekroun</h1>
+          <span style={{
+            display: 'block',
+            marginBottom: '40px',
+            animation: 'fadeUp 0.8s ease forwards',
+            opacity: 0,
+            animationDelay: '0.5s',
+            background: 'linear-gradient(90deg, #1A56DB, #3B82F6, #1A56DB)',
+            backgroundSize: '200% auto',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}>Benchekroun</span>
+        </h1>
 
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
