@@ -41,6 +41,9 @@ const personSchema = {
   description: 'Co-founder & CTO de LIVRR. Expert en stratégie digitale et growth marketing avec 12 ans d\'expérience. Professeur universitaire.',
   sameAs: [
     'https://linkedin.com/in/khalil-benchekroun',
+    'https://www.instagram.com/khalilbenchekroun/',
+    'https://www.facebook.com/profile.php?id=100073374056108',
+    'https://x.com/Khalilbenchekr2',
   ],
   knowsAbout: ['Growth Marketing', 'Stratégie Digitale', 'CTO', 'Marketing Digital'],
 }
