@@ -60,6 +60,16 @@ export default function RootLayout({ children }) {
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-5HRB5KMQ');`}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F2QY2Y0TFM"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F2QY2Y0TFM');`}
+        </Script>
       </head>
       <body>
         <noscript>
