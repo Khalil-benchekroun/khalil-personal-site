@@ -1,3 +1,4 @@
+﻿import Script from 'next/script'
 import './globals.css'
 import { LanguageProvider } from './LanguageContext'
 
@@ -21,6 +22,9 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Khalil Benchekroun — CTO, Growth Marketing & Enseignant',
     description: 'Co-founder & CTO de LIVRR. Expert en stratégie digitale et growth marketing avec 12 ans d\'expérience.',
+  },
+  verification: {
+    google: 'QyL61OfE4uLnWbTv2SlqNrrW9SsAqkFv04X_p4dGhVg',
   },
 }
 
@@ -49,8 +53,23 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5HRB5KMQ');`}
+        </Script>
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5HRB5KMQ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <LanguageProvider>
           {children}
         </LanguageProvider>
