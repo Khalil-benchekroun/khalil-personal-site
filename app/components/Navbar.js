@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 import { useState, useEffect, useRef } from 'react'
 import { useLanguage } from '../LanguageContext'
 
@@ -35,11 +35,11 @@ export default function Navbar() {
   ]
 
   const languages = [
-    { code: 'fr', label: 'FranÃ§ais', flag: 'ðŸ‡«ðŸ‡·' },
-    { code: 'en', label: 'English', flag: 'ðŸ‡¬ðŸ‡§' },
-    { code: 'de', label: 'Deutsch', flag: 'ðŸ‡©ðŸ‡ª' },
-    { code: 'es', label: 'EspaÃ±ol', flag: 'ðŸ‡ªðŸ‡¸' },
-    { code: 'ar', label: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©', flag: 'ðŸ‡²ðŸ‡¦' },
+    { code: 'fr', label: 'Français', flag: '🇫🇷' },
+    { code: 'en', label: 'English', flag: '🇬🇧' },
+    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'ar', label: 'العربية', flag: '🇲🇦' },
   ]
 
   const currentLang = languages.find(l => l.code === lang)
@@ -124,7 +124,7 @@ export default function Navbar() {
               transition: 'transform 0.3s',
               transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)',
               display: 'inline-block',
-            }}>â–¼</span>
+            }}>▼</span>
           </button>
 
           {/* Dropdown menu */}
@@ -172,7 +172,7 @@ export default function Navbar() {
                       marginLeft: 'auto',
                       color: '#1A56DB',
                       fontSize: '12px',
-                    }}>âœ“</span>
+                    }}>✓</span>
                   )}
                 </button>
               ))}
@@ -245,7 +245,7 @@ export default function Navbar() {
             color: '#1A56DB',
             fontSize: '24px',
             cursor: 'pointer',
-          }}>âœ•</button>
+          }}>✕</button>
           {links.map(link => (
             <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
               fontFamily: 'Cormorant Garamond, serif',
