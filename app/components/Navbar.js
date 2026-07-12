@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState, useEffect, useRef } from 'react'
 import { useLanguage } from '../LanguageContext'
 
@@ -30,16 +30,16 @@ export default function Navbar() {
     { label: t.nav_expertise, href: '#expertise' },
     { label: t.nav_methode, href: '#methode' },
     { label: t.nav_realisations, href: '#stats' },
-    { label: t.nav_blog, href: '#blog' },
+    { label: t.nav_blog, href: '/blog' },
     { label: t.nav_contact, href: '#contact' },
   ]
 
   const languages = [
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'ar', label: 'العربية', flag: '🇲🇦' },
+    { code: 'fr', label: 'FranÃ§ais', flag: 'ðŸ‡«ðŸ‡·' },
+    { code: 'en', label: 'English', flag: 'ðŸ‡¬ðŸ‡§' },
+    { code: 'de', label: 'Deutsch', flag: 'ðŸ‡©ðŸ‡ª' },
+    { code: 'es', label: 'EspaÃ±ol', flag: 'ðŸ‡ªðŸ‡¸' },
+    { code: 'ar', label: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©', flag: 'ðŸ‡²ðŸ‡¦' },
   ]
 
   const currentLang = languages.find(l => l.code === lang)
@@ -124,7 +124,7 @@ export default function Navbar() {
               transition: 'transform 0.3s',
               transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)',
               display: 'inline-block',
-            }}>▼</span>
+            }}>â–¼</span>
           </button>
 
           {/* Dropdown menu */}
@@ -172,7 +172,7 @@ export default function Navbar() {
                       marginLeft: 'auto',
                       color: '#1A56DB',
                       fontSize: '12px',
-                    }}>✓</span>
+                    }}>âœ“</span>
                   )}
                 </button>
               ))}
@@ -245,7 +245,7 @@ export default function Navbar() {
             color: '#1A56DB',
             fontSize: '24px',
             cursor: 'pointer',
-          }}>✕</button>
+          }}>âœ•</button>
           {links.map(link => (
             <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
               fontFamily: 'Cormorant Garamond, serif',
