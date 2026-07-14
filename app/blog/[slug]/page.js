@@ -2,6 +2,7 @@
 import { notFound } from 'next/navigation'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import Cursor from '../../components/Cursor'
 import { posts, getPostBySlug } from '../posts'
 
 export async function generateStaticParams() {
@@ -56,6 +57,7 @@ export default function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <Cursor />
       <Navbar />
       <main style={{
         maxWidth: '760px',

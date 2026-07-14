@@ -1,5 +1,6 @@
 ﻿import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Cursor from '../components/Cursor'
 import PostList from './PostList'
 import { posts } from './posts'
 
@@ -14,6 +15,7 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <>
+      <Cursor />
       <Navbar />
       <main style={{
         maxWidth: '1000px',
